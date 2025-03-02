@@ -23,6 +23,10 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
         print(f"{bot.user.name} has connected")
 
+for folder in os.listdir("modules"):
+     if os.path.exists(os.path.join("modules", folder, "cog.py")):
+          bot.load_extension(f"modules.{folder}.cog")
+
 @bot.event
 async def on_message(ctx):
     user_id = ctx.author.id
@@ -34,15 +38,12 @@ async def on_message(ctx):
         if time_since_last_trigger < 60:
             return  # Ignore the message if it was sent within the last 60 seconds
 
-    if ctx.content.startswith(("Hello", "hello")):
+    if ctx.content.startswith(("hello", "Hello", "coucou", "Coucou", "salut", "Salut")):
         await ctx.channel.send(f"Coucou {ctx.author.mention}")
         last_triggered[user_id] = current_time  # Update the last triggered time
     
     await bot.process_commands(ctx) # Allow the bot to process other commands
 
-@bot.command()
-async def ping(ctx):
-    '''Bot respond with Pong !'''
-    await ctx.send("Pong")
+
 
 bot.run(os.getenv('TOKEN'))
