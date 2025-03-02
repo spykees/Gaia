@@ -7,6 +7,8 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
 - Responds to messages starting with "Hello" or "hello" with a greeting.
 - Implements a simple anti-spam mechanism to prevent repeated triggering within a short period.
 - Responds to the `!ping` command with "Pong".
+- List cogs with `!listmods` command
+- Reload specified cog with `!reload`<cogname>
 
 ## Requirements
 
