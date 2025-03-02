@@ -7,7 +7,7 @@ import nextcord
 from nextcord.ext import commands
 
 last_triggered = {}
-last_ping = {}
+
 load_dotenv()
 
 
