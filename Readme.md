@@ -39,7 +39,7 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
     pip install -r requirements.txt
     ```
 
-4. Rename the .env.exemple in [.env](http://_vscodecontentref_/1)  in the root directory of the project and change all the id or token needed
+4. Rename the .env.exemple to [.env](http://_vscodecontentref_/1)  in the root directory of the project and change all the id or token needed
 
 ## Usage
 
