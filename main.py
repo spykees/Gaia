@@ -10,7 +10,6 @@ last_triggered = {}
 
 load_dotenv()
 
-
 intents = nextcord.Intents.default()
 intents.presences = True
 intents.members = True
@@ -21,11 +20,14 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 @bot.event
 async def on_ready():
-        print(f"{bot.user.name} has connected")
+    print(f"{bot.user.name} has connected")
 
-for folder in os.listdir("modules"):
-     if os.path.exists(os.path.join("modules", folder, "cog.py")):
-          bot.load_extension(f"modules.{folder}.cog")
+# Load all cogs in ./cogs folder if files end with .py and print "nameofthefile" (without .py) is loaded
+for filename in os.listdir('./cogs'):
+    if filename.endswith('.py'):
+        cog_name = filename[:-3]
+        bot.load_extension(f'cogs.{cog_name}')
+        print(f'{cog_name} is loaded')
 
 @bot.event
 async def on_message(ctx):
@@ -44,6 +46,11 @@ async def on_message(ctx):
     
     await bot.process_commands(ctx) # Allow the bot to process other commands
 
-
+    @bot.event
+    async def on_member_join(member):
+        channel_id = os.getenv('WELCOME_CHANNEL_ID')  # Ensure you have set this in your .env file
+        channel = bot.get_channel(int(channel_id))
+        if channel:
+            await channel.send(f"Hello {member.mention}, welcome to the server!")
 
 bot.run(os.getenv('TOKEN'))
