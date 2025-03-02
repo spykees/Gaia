@@ -1,3 +1,5 @@
+''' Only for test purpose need to be deleted if used in a real project '''
+
 from nextcord.ext import commands
 
 class Ping(commands.Cog, name = "Ping"):

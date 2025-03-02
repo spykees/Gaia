@@ -1,0 +1,18 @@
+{
+    "greeting": "Hello {user}, welcome to the server!",
+    "available_cogs": "Available Cogs",
+    "cog_reloaded": "Cog {cog} reloaded successfully.",
+    "error_reloading_cog": "Error reloading cog {cog}: {error}",
+    "moderator_role_not_found": "Moderator role not found, check .env file.",
+    "already_moderator": "{user} is already in the moderator role.",
+    "added_to_moderator": "{user} has been added to the moderator role.",
+    "has connected": " has connected.",
+    "is loaded": " is loaded !",
+    "kick_message": "{member} has been kicked for {reason}",
+    "ban_message": "{member} has been banned for {reason}",
+    "listmods_help": "Lists all available cogs.",
+    "reload_help": "Reloads the specified cog.",
+    "setmodo_help": "Adds a member to the moderator role.",
+    "kick_help": "Kicks a member from the server.",
+    "ban_help": "Bans a member from the server."
+}

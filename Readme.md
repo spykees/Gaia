@@ -1,14 +1,19 @@
 # Gaia Bot
 
-Gaia Bot is a Discord bot built using the `nextcord` library. It responds to messages and commands in a Discord server. This is a simple project for now !
+Gaia Bot is a Discord bot built using the `nextcord` library. It responds to messages and commands in a Discord server. This project includes multi-language support and various moderation commands.
 
 ## Features
 
-- Responds to messages starting with "Hello" or "hello" with a greeting.
+- Responds to messages starting with "hello", "Hello", "coucou", "Coucou", "salut", or "Salut" with a greeting.
 - Implements a simple anti-spam mechanism to prevent repeated triggering within a short period.
-- Responds to the `!ping` command with "Pong".
-- List cogs with `!listmods` command
-- Reload specified cog with `!reload`cogname
+- Multi-language support for commands and responses.
+- Moderation commands:
+  - `!kick <username> <reason>`: Kicks a member from the server with an optional reason.
+  - `!ban <username> <reason>`: Bans a member from the server with an optional reason.
+- Admin commands:
+  - `!listmods`: Lists all available cogs.
+  - `!reload <cog>`: Reloads the specified cog.
+  - `!setmodo <username>`: Adds a member to the moderator role.
 
 ## Requirements
 
@@ -39,7 +44,7 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
     pip install -r requirements.txt
     ```
 
-4. Rename the .env.exemple to .env  in the root directory of the project and change all the id or token needed
+4. Rename the `.env.example` to `.env` in the root directory of the project and update the necessary IDs and tokens.
 
 ## Usage
 
@@ -53,18 +58,25 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
 
 ## Code Overview
 
-The main functionality of the bot is implemented in main.py. Here is a brief overview of the key parts:
+The main functionality of the bot is implemented in `main.py`. Here is a brief overview of the key parts:
 
 - **Bot Initialization**: The bot is initialized with specific intents and a command prefix.
-- **Event Handlers**: The bot has event handlers for on_ready and on_message events.
+- **Event Handlers**: The bot has event handlers for `on_ready`, `on_message`, and `on_member_join` events.
 - **Commands**: 
-    - The bot has a ping command that responds with "Pong".
-    - The bot has a listmods command to list all modules loaded.
-    - The bot has a reload command to reload a specific modules.
+  - The bot has moderation commands (`kick`, `ban`).
+  - The bot has admin commands (`listmods`, `reload`, `setmodo`).
+
+## Multi-language Support
+
+The bot supports multiple languages for commands and responses. The translations are stored in JSON files located in the `lng` directory. You can add or update translations by modifying these files.
 
 ## Contributing
 
 If you would like to contribute to this project, please fork the repository and submit a pull request.
+
+## Transaltion
+- FR Shark
+- EN Shark
 
 ## License
 
