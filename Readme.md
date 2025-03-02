@@ -1,6 +1,6 @@
 # Gaia Bot
 
-Gaia Bot is a Discord bot built using the `nextcord` library. It responds to messages and commands in a Discord server.
+Gaia Bot is a Discord bot built using the `nextcord` library. It responds to messages and commands in a Discord server. This is a simple project for now !
 
 ## Features
 
