@@ -39,7 +39,7 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
     pip install -r requirements.txt
     ```
 
-4. Rename the .env.exemple to [.env](http://_vscodecontentref_/1)  in the root directory of the project and change all the id or token needed
+4. Rename the .env.exemple to .env  in the root directory of the project and change all the id or token needed
 
 ## Usage
 
@@ -53,11 +53,14 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
 
 ## Code Overview
 
-The main functionality of the bot is implemented in [main.py](http://_vscodecontentref_/2). Here is a brief overview of the key parts:
+The main functionality of the bot is implemented in main.py. Here is a brief overview of the key parts:
 
 - **Bot Initialization**: The bot is initialized with specific intents and a command prefix.
-- **Event Handlers**: The bot has event handlers for [on_ready](http://_vscodecontentref_/3) and [on_message](http://_vscodecontentref_/4) events.
-- **Commands**: The bot has a [ping](http://_vscodecontentref_/5) command that responds with "Pong".
+- **Event Handlers**: The bot has event handlers for on_ready and on_message events.
+- **Commands**: 
+    - The bot has a ping command that responds with "Pong".
+    - The bot has a listmods command to list all modules loaded.
+    - The bot has a reload command to reload a specific modules.
 
 ## Contributing
 
