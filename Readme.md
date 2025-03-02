@@ -12,7 +12,7 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
 
 ## Requirements
 
-- Python 3.6+
+- Python 3.10+
 - `nextcord` library
 - `python-dotenv` library
 
@@ -39,11 +39,7 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
     pip install -r requirements.txt
     ```
 
-4. Create a [.env](http://_vscodecontentref_/1) file in the root directory of the project and add  Discordyour bot token:
-
-    ```env
-    TOKEN=your_discord_bot_token
-    ```
+4. Rename the .env.exemple in [.env](http://_vscodecontentref_/1)  in the root directory of the project and change all the id or token needed
 
 ## Usage
 
