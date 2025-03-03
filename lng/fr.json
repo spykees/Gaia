@@ -1,4 +1,5 @@
 {
+    "_comment": "Translated by Shark",
     "greeting": "Bonjour {user}, bienvenue sur le serveur!",
     "available_cogs": "Modules disponibles",
     "cog_reloaded": "Module {cog} rechargé avec succès.",
@@ -14,5 +15,8 @@
     "reload_help": "Recharge le module spécifié.",
     "setmodo_help": "Ajoute un membre au rôle de modérateur.",
     "kick_help": "Expulse un membre du serveur.",
-    "ban_help": "Bannit un membre du serveur."
+    "ban_help": "Bannit un membre du serveur.",
+    "unsetmodo_help": "Retire l'utilisateur du groupe de modération",
+    "remove_to_moderator": "{member} a été retiré du groupe de modération",
+    "not_moderator": "{member} n'est pas un modérateur"
 }

@@ -1,5 +1,6 @@
 from nextcord.ext import commands
 from lng import translate
+from utils.logger import log_command
 
 class Moderator(commands.Cog, name="Moderation"):
     '''Moderation commands'''
@@ -10,6 +11,7 @@ class Moderator(commands.Cog, name="Moderation"):
     @commands.has_permissions(kick_members=True)
     async def kick(self, ctx, member: commands.MemberConverter, *, reason=None):
         '''Usage !kick username reason. Reason is optional'''
+        log_command('kick', ctx.author)
         await member.kick(reason=reason)
         await ctx.send(translate("kick_message", member=member, reason=reason))
 
@@ -17,6 +19,7 @@ class Moderator(commands.Cog, name="Moderation"):
     @commands.has_permissions(ban_members=True)
     async def ban(self, ctx, member: commands.MemberConverter, *, reason=None):
         '''Usage !ban username reason. Reason is optional'''
+        log_command('ban', ctx.author)
         await member.ban(reason=reason)
         await ctx.send(translate("ban_message", member=member, reason=reason))
 
