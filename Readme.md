@@ -14,7 +14,7 @@ Gaia Bot is a Discord bot built using the `nextcord` library. It responds to mes
   - `!listmods`: Lists all available cogs.
   - `!reload <cog>`: Reloads the specified cog.
   - `!setmodo <username>`: Adds a member to the moderator role.
-- All Moderation commands like kick ban arent log with date and time, username of the modo, name of target and reason
+- All Moderation commands like kick ban are log with date and time, username of the modo, name of target and reason
 
 ## Requirements
 
