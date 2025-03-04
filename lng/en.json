@@ -1,5 +1,7 @@
 {
     "_comment": "Translated by Shark",
+    "is loaded": " is loaded !",
+    "has connected": " has connected.",
     "greeting": "Hello {user}, welcome to the server!",
     "available_cogs": "Available Cogs",
     "cog_reloaded": "Cog {cog} reloaded successfully.",
@@ -7,16 +9,16 @@
     "moderator_role_not_found": "Moderator role not found, check .env file.",
     "already_moderator": "{user} is already in the moderator role.",
     "added_to_moderator": "{user} has been added to the moderator role.",
-    "has connected": " has connected.",
-    "is loaded": " is loaded !",
-    "kick_message": "{member} has been kicked for {reason}",
+    "not_moderator": "{member} is not a moderator",
+    "remove_to_moderator": "{member} has been remove from moderator role",
+    "kick_message": "{member} has been kicked for {reason}.",
+    "kick_message_no_reason": "{member} has been kicked.",
     "ban_message": "{member} has been banned for {reason}",
-    "listmods_help": "Lists all available cogs.",
-    "reload_help": "Reloads the specified cog.",
+    "ban_message_no_reason": "{member} has been banned",
     "setmodo_help": "Adds a member to the moderator role.",
+    "unsetmodo_help": " Remove a user from the moderation role",
     "kick_help": "Kicks a member from the server.",
     "ban_help": "Bans a member from the server.",
-    "unsetmodo_help": " Remove a user from the moderation role",
-    "remove_to_moderator": "{member} has been remove from moderator role",
-    "not_moderator": "{member} is not a moderator"
+    "listmods_help": "Lists all available cogs.",
+    "reload_help": "Reloads the specified cog."
 }

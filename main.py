@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 import nextcord
 from nextcord.ext import commands
-from lng import translate
+from utils.lng import translate
 
 last_triggered = {}
 

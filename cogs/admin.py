@@ -1,7 +1,7 @@
 import os
 import nextcord
 from nextcord.ext import commands
-from lng import translate
+from utils.lng import translate
 from utils.logger import log_command
 
 class Admin(commands.Cog, name="Admin"):
@@ -26,6 +26,7 @@ class Admin(commands.Cog, name="Admin"):
     @commands.has_permissions(administrator=True)
     async def reload(self, ctx, cog: str):
         '''Reload the cog specified with !reload <cog>'''
+        log_command('reload', ctx.author)
         try:
             self.bot.reload_extension(f'cogs.{cog}')
             channel = self.bot.get_channel(int(os.getenv('DEBUG_CHAN')))
